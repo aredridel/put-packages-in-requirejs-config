@@ -17,5 +17,17 @@
     "eswalk": "^1.0.2",
     "glob": "^5.0.14",
     "rsvp": "^3.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aredridel/put-packages-in-requirejs-config.git"
+  },
+  "keywords": [
+    "require.js",
+    "amd"
+  ],
+  "bugs": {
+    "url": "https://github.com/aredridel/put-packages-in-requirejs-config/issues"
+  },
+  "homepage": "https://github.com/aredridel/put-packages-in-requirejs-config#readme"
 }
