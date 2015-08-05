@@ -38,5 +38,11 @@ function extractRJSFields(o) {
         out.location = o.location;
     }
 
+    if (o.main) {
+        out.main = o.main;
+    } else {
+        out.main = 'index.js';
+    }
+
     return out;
 }
