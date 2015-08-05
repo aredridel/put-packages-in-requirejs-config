@@ -1,6 +1,6 @@
 {
   "name": "put-packages-in-requirejs-config",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Insert packages into a require.js config file",
   "main": "index.js",
   "scripts": {
