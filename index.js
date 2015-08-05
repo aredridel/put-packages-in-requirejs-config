@@ -10,7 +10,7 @@ var readFile = rsvp.denodeify(fs.readFile);
 var insertPackages = require('./insertPackages');
 var escodegen = require('escodegen');
 
-module.exports = function insertPackagesFromPathIntoConfig(root, config) {
+module.exports = function insertPackagesFromPathIntoConfig(root, config, dest) {
     return glob(path.resolve(root, '*', 'package.json')).then(function (files) {
         return Promise.all(files.map(function (f) {
             return readFile(f, 'utf-8').then(JSON.parse).then(extractRJSFields);
@@ -20,7 +20,7 @@ module.exports = function insertPackagesFromPathIntoConfig(root, config) {
             return insertPackages(file, p);
         });
     }).then(function (pt) {
-        return writeFile(config, escodegen.generate(pt));
+        return writeFile(config || dest, escodegen.generate(pt));
     });
 };
 
