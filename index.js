@@ -20,7 +20,7 @@ module.exports = function insertPackagesFromPathIntoConfig(root, config, dest) {
             return insertPackages(file, p);
         });
     }).then(function (pt) {
-        return writeFile(config || dest, escodegen.generate(pt));
+        return writeFile(dest || config, escodegen.generate(pt));
     });
 };
 
